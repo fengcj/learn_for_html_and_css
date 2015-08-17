@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text.html;charset=utf-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<style>
+		
+		.dropdown{
+			float:left;
+		}
+
+	</style>
+</head>
+<body>
+
+
+<div class="container">
+
+	<div class="dropdown">
+
+		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown">
+			left menu
+			<span class="caret"></span>
+		</button>
+
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+
+			<li class="dropdown-header" role="presentation">menu header</li> <!-- menu header-->
+
+			<li role="presentation" class="active"><a href="#" role="menuitem" tableindex="-1">drop menu1</a></li>  <!-- active-->
+			<li role="presentation"><a href="#" role="menuitem" tableindex="-1">drop menu2</a></li>
+			<li role="presentation"><a href="#" role="menuitem" tableindex="-1">drop menu3</a></li>
+
+			<li class="divider"></li>  <!-- menu divider-->
+
+			<li role="presentation"><a href="#" role="menuitem" tableindex="-1">drop menu4</a></li>
+		</ul>
+
+	</div>  <!-- end dropdown-->
+
+</div>
+
+<br><br>
+
+<div class="container">
+	<div class="dropdown">
+		
+		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown">
+			right menu
+			<span class="caret"></span>
+		</button>
+
+		<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">  <!--add pull-right-->
+
+			<li class="dropdown-header" role="presentation">menu header</li> <!-- menu header-->
+
+			<li role="presentation"><a href="#" role="menuitem" tableindex="-1">drop menu1</a></li>
+			<li role="presentation"><a href="#" role="menuitem" tableindex="-1">drop menu2</a></li>
+			<li role="presentation"><a href="#" role="menuitem" tableindex="-1">drop menu3</a></li>
+
+			<li class="divider"></li>  <!-- menu divider-->
+
+			<li role="presentation" class="disabled"><a href="#" role="menuitem" tableindex="-1">drop menu4</a></li>  <!-- disable -->
+		</ul>
+
+	</div>  <!-- end dropdown-->
+<div>
+
+<br><br>
+
+<div class="container">
+
+	<div class="btn-group dropup">
+		
+		<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">up menu<span class="caret"></span></button>	
+		<ul class="dropdown-menu">
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+		</ul>
+	</div>
+	
+
+</div>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+</body>
+</html>

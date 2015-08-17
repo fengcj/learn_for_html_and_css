@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>表单控件状态——验证状态</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script type="text/javascript">
+/*  window.onload =function(){
+      var  nameInput = document.getElementById("inputSuccess1");
+      nameInput.addEventListener('input',function(){
+          var value = nameInput.value;
+          if(value && value.length<6){
+             // document.getElementById("for-input").className="form-group has-warning";
+             $("#for-input").removeClass("has-success").addClass("has-warning");
+          }else{
+            document.getElementById("for-input").className="form-group has-success";
+          }
+  });
+  }*/
+
+  $(document).ready(function(){
+        //  var  nameInput = document.getElementById("inputSuccess1");
+          var nameInput = $("#inputSuccess1");
+          nameInput.on('input',function(){
+          var value = nameInput.val();
+          if(value && value.length<6){
+             // document.getElementById("for-input").className="form-group has-warning";
+             $("#for-input").removeClass("has-success").addClass("has-warning");
+             $("#info").text("the password must have more than 8 characters");
+          }else{
+            // document.getElementById("for-input").className="form-group has-success";
+             $("#for-input").removeClass("has-warning").addClass("has-success");
+             $("#info").text("");
+          }
+    });
+  });
+</script>
+<body>
+<h3>示例1</h3>
+<form role="form">
+  <div class="form-group has-success" id="for-input">
+    <label class="control-label" for="inputSuccess1">成功状态</label>
+    <input type="text" class="form-control" id="inputSuccess1" placeholder="成功状态" >
+    <span class="help-block" id="info"></span>
+  </div>
+  <div class="form-group has-warning">
+    <label class="control-label" for="inputWarning1">警告状态</label>
+    <input type="text" class="form-control" id="inputWarning1" placeholder="警告状态">
+  </div>
+  <div class="form-group has-error">
+    <label class="control-label" for="inputError1">错误状态</label>
+    <input type="text" class="form-control" id="inputError1" placeholder="错误状态">
+  </div>
+</form>  
+<br>
+<br>
+<br>
+
+
+<h3>示例2</h3>   
+<form role="form">
+  <div class="form-group has-success has-feedback">
+    <label class="control-label" for="inputSuccess1">成功状态</label>
+    <input type="text" class="form-control" id="inputSuccess1" placeholder="成功状态" >
+    <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+  </div>
+  <div class="form-group has-warning has-feedback">
+    <label class="control-label" for="inputWarning1">警告状态</label>
+    <input type="text" class="form-control" id="inputWarning1" placeholder="警告状态">
+    <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+  </div>
+  <div class="form-group has-error has-feedback">
+    <label class="control-label" for="inputError1">错误状态</label>
+    <input type="text" class="form-control" id="inputError1" placeholder="错误状态">
+    <span class="glyphicon glyphicon-remove form-control-feedback"></span>  
+  </div>
+
+</form>
+</body>
+</html>
